@@ -81,7 +81,7 @@ if __name__ == '__main__':
                 else:
                     print("Error: (%d) %s" % (result.status_code, result.content))
             elif method == 'dockercli':
-                cmd = 'docker exec miner miner peer refresh %s' % (peer,)
+                cmd = 'docker exec helium-miner miner peer refresh %s' % (peer,)
                 print("Running: %s" % (cmd,))
                 split_cmd = cmd.split(' ')
                 result = subprocess.check_output(split_cmd)
