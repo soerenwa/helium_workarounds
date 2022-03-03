@@ -5,11 +5,11 @@ import requests
 import subprocess
 import time
 import sys
-import docker
+#import docker
 import os
 
-#method = 'dockercli'
-method = 'dockerapi'
+method = 'dockercli'
+#method = 'dockerapi'
 
 def follow(filename, sleep_sec=0.1, seek_end=True):
     """ Yield each line from a file as they are written.
