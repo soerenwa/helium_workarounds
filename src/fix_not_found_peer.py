@@ -67,11 +67,11 @@ if __name__ == '__main__':
     for line in follow(log_file):
         m = re.match(r'.*failed to dial (?:challenger|proxy server) "(.*)":? not_found', line)
         if not log_only_failed:
-            print(line, end = '')
+            print(line, end='')
         if m is not None:
             peer = m.group(1)
             if log_only_failed:
-                print(line, end = '')
+                print(line, end='')
             if method == 'jsonrpc':
                 json_msg['params']['Addr'] = peer
                 print("Issuing request to miner to reload peer %s" % (peer,))
